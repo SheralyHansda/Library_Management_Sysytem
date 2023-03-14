@@ -216,22 +216,22 @@ public class Borrower_Details extends javax.swing.JFrame {
         String BorrowerName = txt_borrowerName.getText();
         String BookName = txt_bookName.getText();
         String Quantity = txt_quantity.getText();
-//        try
-//        {
-//            Connection con=ConnectionProvider.getCon();
-//            Statement st=con.createStatement();
-//          
-//            st.executeUpdate("insert into borrower_details values('"+BookID+"','"+BorrowerName+"','"+BookName+"','"+Quantity+"')");
-//            JOptionPane.showMessageDialog(null, "Successfully Added");
-//            setVisible(false);
-//            new Borrower_Details().setVisible(true);
-//        }
-//        catch(Exception e)
-//        {
-//            JOptionPane.showMessageDialog(null,e);
-//            setVisible(false);
-//            new Borrower_Details().setVisible(true);
-//        }
+        try
+        {
+            Connection con=ConnectionProvider.getCon();
+            Statement st=con.createStatement();
+          
+            st.executeUpdate("insert into borrower_details values('"+BookID+"','"+BorrowerName+"','"+BookName+"','"+Quantity+"')");
+            JOptionPane.showMessageDialog(null, "Successfully Added");
+            setVisible(false);
+            new Borrower_Details().setVisible(true);
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null,e);
+            setVisible(false);
+            new Borrower_Details().setVisible(true);
+        }
     }//GEN-LAST:event_Button_add2ActionPerformed
 
     /**
